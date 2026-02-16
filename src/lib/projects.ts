@@ -232,13 +232,19 @@ export const projects: Project[] = [
   // Fun projects
   {
     kind: "fun",
-    slug: "recipe-project",
+    slug: "recipe_project",
     title: "recipe_project",
     oneLiner: "Tiny experiment around recipes and fast iteration.",
     description:
       "A small side project — quick build focused on learning and shipping.",
     tags: ["Fun", "Experiment"],
     status: "Active",
+    links: [
+      {
+        label: "GitHub",
+        href: "https://github.com/Andranikniko/recipe_project",
+      },
+    ],
   },
   {
     kind: "fun",
@@ -249,6 +255,12 @@ export const projects: Project[] = [
       "A side experiment — lightweight and playful, built to explore an idea.",
     tags: ["Fun", "Experiment"],
     status: "Active",
+    links: [
+      {
+        label: "GitHub",
+        href: "https://github.com/Andranikniko/anyone-free",
+      },
+    ],
   },
 ];
 
