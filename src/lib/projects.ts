@@ -56,6 +56,20 @@ export const projects: Project[] = [
       "Increased B2B retention and LTV via data-driven product iteration.",
       "Established LegitGrails as a top-tier player in authentication tech.",
     ],
+    screenshots: [
+      {
+        alt: "LegitGrails — New Authentication flow (order form)",
+        src: "/projects/legitgrails-b2b-platform/new-auth.png",
+      },
+      {
+        alt: "LegitGrails — analytics dashboard (registrations, conversions)",
+        src: "/projects/legitgrails-b2b-platform/analytics-registrations.png",
+      },
+      {
+        alt: "LegitGrails — key metrics (days to orders, avg orders per user)",
+        src: "/projects/legitgrails-b2b-platform/metrics-orders.png",
+      },
+    ],
   },
   {
     slug: "resale-x",
@@ -86,6 +100,14 @@ export const projects: Project[] = [
       {
         alt: "Resale-X — item details / pricing / counterfeit probability UI",
         src: "/projects/resale-x/ui-1.jpg",
+      },
+      {
+        alt: "Resale-X — item page with valuation and counterfeit probability",
+        src: "/projects/resale-x/ui-2.png",
+      },
+      {
+        alt: "Resale-X — steps to the first deal (alerts workflow)",
+        src: "/projects/resale-x/steps.png",
       },
     ],
   },
@@ -144,6 +166,16 @@ export const projects: Project[] = [
       "Rolled out loyalty system that increased daily active users and reduced churn.",
       "Improved conversion and ARPU with tailored internet package design.",
     ],
+    screenshots: [
+      {
+        alt: "Yesim — eSIM onboarding (how it works)",
+        src: "/projects/yesim-b2b/how-esim-works.png",
+      },
+      {
+        alt: "Yesim — business product page (features and getting started)",
+        src: "/projects/yesim-b2b/yesim-business.png",
+      },
+    ],
   },
   {
     slug: "bchef",
@@ -167,6 +199,12 @@ export const projects: Project[] = [
       "Reached a valuation of €1.5M within 6 months of launch (bootstrapped).",
       "Operated for 1 year; pivoted and closed due to scaling difficulties.",
       "Gained hands-on experience in B2C ops, logistics, and foodtech GTM.",
+    ],
+    screenshots: [
+      {
+        alt: "BChef — how it works (3-step flow)",
+        src: "/projects/bchef/how-it-works.png",
+      },
     ],
   },
   {
