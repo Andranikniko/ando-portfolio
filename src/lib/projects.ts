@@ -6,9 +6,17 @@ export type Project = {
   tags: string[];
   status?: "Active" | "Shipped" | "Paused";
   links?: { label: string; href: string }[];
-  highlights?: string[];
+
   role?: string;
   timeline?: string;
+
+  problem?: string;
+  approach?: string[];
+  results?: string[];
+  highlights?: string[];
+
+  // Future: screenshots / media
+  screenshots?: { alt: string; src: string }[];
 };
 
 export const projects: Project[] = [
@@ -17,25 +25,36 @@ export const projects: Project[] = [
     title: "LegitGrails B2B Platform",
     oneLiner: "Scaled a dual B2B/B2C SaaS authentication platform.",
     description:
-      "Led the development and scaling of a dual B2B/B2C SaaS authentication platform (from $5K to $120K MRR).",
+      "Led the development and scaling of a dual B2B and B2C SaaS authentication service platform.",
     tags: ["B2B SaaS", "Auth", "APIs", "Shopify"],
     status: "Shipped",
     role: "Head of Product",
     timeline: "Oct 2022 – Present",
     links: [
       { label: "legitgrails.com", href: "https://legitgrails.com/" },
+      { label: "Account", href: "https://account.legitgrails.com/" },
       { label: "B2B", href: "https://b2b.legitgrails.com/" },
       {
         label: "API Docs",
         href: "https://legit-grails.stoplight.io/docs/verification-api/9ad89a0cede23-summary",
       },
     ],
-    highlights: [
-      "Rebuilt user journey + architecture for subscriptions, credits, tracking, and integrations.",
-      "Launched public API with docs + landing page.",
-      "Rebrand + UX overhaul; analytics dashboards for prioritization.",
-      "Enterprise integrations (GoodWill, British Red Cross, FarFetch).",
-      "Results: $5K → $120K MRR in <2 years.",
+    problem:
+      "Fragmented user experience for fashion resale businesses and individual users seeking item authentication, poor retention and limited automation.",
+    approach: [
+      "Rebuilt the user journey and architecture to support subscriptions, credits, order tracking, and integrations with Shopify and e-commerce APIs.",
+      "Implemented financial guarantee model to de-risk the experience.",
+      "Designed and launched loyalty and referral programs in close collaboration with business development.",
+      "Led the full rebranding of the platform (UI/UX overhaul and repositioning).",
+      "Built analytics dashboards (Amplitude, Looker) for insight-led prioritization.",
+      "Expanded to Japanese market with localized UX and payment features.",
+      "Launched public API integration with full documentation and a dedicated landing page.",
+      "Onboarded new clients and supported enterprise integrations (GoodWill, British Red Cross, FarFetch).",
+    ],
+    results: [
+      "Scaled from $5K to $120K MRR in under 2 years.",
+      "Increased B2B retention and LTV via data-driven product iteration.",
+      "Established LegitGrails as a top-tier player in authentication tech.",
     ],
   },
   {
@@ -43,16 +62,25 @@ export const projects: Project[] = [
     title: "Resale-X (AI Application)",
     oneLiner: "AI recognition + price estimation for fashion resale.",
     description:
-      "AI tool for item recognition and price estimation using ML + historical verification data.",
+      "Created Resale-X as a spin-off AI tool for item recognition and price estimation using ML and LegitGrails historical data.",
     tags: ["AI", "ML", "Resale"],
     status: "Active",
     role: "Product Lead",
     timeline: "2024 – Present",
     links: [{ label: "resale-x.com", href: "https://resale-x.com/" }],
-    highlights: [
-      "MVP built with CTO; model trained on marketplace photos + verification results.",
-      "Pipeline + API infrastructure for external integrations.",
-      "Signed 10+ B2B test clients; Daykonkuya Japan implemented via WhatsApp bots.",
+    problem:
+      "Lack of scalable tools for automatic recognition and pricing of fashion resale items.",
+    approach: [
+      "Developed an MVP with the CTO of LegitGrails.",
+      "Trained the AI model on marketplace photos and verification results.",
+      "Created product pipeline and API infrastructure for external integrations.",
+      "Built web app for B2B clients (resellers, consignment stores).",
+      "Launched inside the LegitGrails user base, gathered feedback, and ran discovery for scaling.",
+      "Signed first B2B clients including Daykonkuya Japan (implemented via WhatsApp bots at item intake).",
+    ],
+    results: [
+      "Achieved 10+ B2B test clients in EU and US markets.",
+      "Enabled partner platforms to pre-qualify item listings using AI.",
     ],
   },
   {
@@ -60,16 +88,27 @@ export const projects: Project[] = [
     title: "VNX.li Compliance Integration",
     oneLiner: "KYC/AML onboarding + compliance integrations for tokenized investments.",
     description:
-      "Built KYC/AML onboarding flows for a tokenized investment platform (HNWIs) and contributed to VNXAU (tokenized gold).",
+      "Worked on a tokenized investment platform for HNWIs. Introduced built-in KYC/AML compliance flows and improved onboarding UX. Contributed to the historical launch of VNXAU (tokenized gold).",
     tags: ["FinTech", "Compliance", "KYC/AML"],
     status: "Shipped",
     role: "Product Manager & COO",
     timeline: "Jan 2022 – Oct 2022",
     links: [{ label: "vnx.li", href: "https://vnx.li/" }],
-    highlights: [
-      "Integrated KYC/KYB providers + screening; onboarding wizard + risk scoring.",
-      "Supported DeFi strategy and liquidity management; built admin tooling.",
-      "Results: 20+ HNWI accounts onboarded; improved completion rates; audits passed.",
+    problem:
+      "Highly manual onboarding process and fragmented compliance integrations.",
+    approach: [
+      "Integrated KYC/KYB providers and crypto transaction screening.",
+      "Designed onboarding wizard combining regulatory steps with UX best practices.",
+      "Implemented transaction limits and risk scoring based on user profile.",
+      "Integrated with SumSub for KYC/KYB compliance, transaction screening, and Travel Rule adherence.",
+      "Helped structure DeFi strategy and supported liquidity provision management.",
+      "Developed admin panel for user management and financial reporting.",
+      "Contributed to internal audit reports and regulatory filings.",
+    ],
+    results: [
+      "20+ HNWI accounts onboarded.",
+      "Reduced compliance rejection rates and improved completion rates.",
+      "Passed internal and external regulatory audits.",
     ],
   },
   {
@@ -77,7 +116,7 @@ export const projects: Project[] = [
     title: "Yesim B2B Platform and Mobile App",
     oneLiner: "B2B telecom SaaS GTM + retention via loyalty and packages.",
     description:
-      "Led GTM and product development for a B2B telecom SaaS product; improved retention via loyalty & packages.",
+      "Led GTM and product development for a B2B telecom SaaS product and supported Yesim’s consumer app.",
     tags: ["B2B", "Telecom", "GTM"],
     status: "Shipped",
     role: "Product Manager",
@@ -86,10 +125,18 @@ export const projects: Project[] = [
       { label: "yesim.app", href: "https://yesim.app/" },
       { label: "B2B", href: "https://yesim.app/b2b-enterprise/" },
     ],
-    highlights: [
-      "Built loyalty program; partner API integrations + B2B dashboard.",
-      "Analytics-driven roadmap; optimized eSIM packages and conversion/ARPU.",
-      "Results: first enterprise B2B contract; increased DAU and reduced churn.",
+    problem:
+      "Limited user stickiness and no structured business loyalty offering.",
+    approach: [
+      "Developed loyalty program with cross-spending credits across airline partners.",
+      "Set up partner API integrations and B2B dashboard.",
+      "Managed roadmap and analytics using Amplitude and Pipedrive.",
+      "Led development of country-specific eSIM packages (including unlimited offers) based on usage analysis and market demand.",
+    ],
+    results: [
+      "Landed first enterprise B2B contract.",
+      "Rolled out loyalty system that increased daily active users and reduced churn.",
+      "Improved conversion and ARPU with tailored internet package design.",
     ],
   },
   {
@@ -97,16 +144,23 @@ export const projects: Project[] = [
     title: "BChef.lv (Side Project)",
     oneLiner: "Bootstrapped meal-kit delivery in Latvia during COVID.",
     description:
-      "Founder — built Latvia’s first meal-kit delivery platform during COVID; reached €1.5M valuation (bootstrapped).",
+      "Built and launched Latvia’s first meal-kit delivery platform during COVID-19.",
     tags: ["Founder", "B2C", "Ops"],
     status: "Shipped",
     role: "Founder",
     timeline: "2020 – 2021",
-    links: [{ label: "Instagram", href: "https://www.instagram.com/bchef.lv/" }],
-    highlights: [
-      "Backend menu planning + automatic calculations; supplier database.",
-      "Partnered with 5 local restaurants; 100 paying users in 100 days.",
-      "Closed after 1 year due to scaling constraints (valuable ops/GTM learnings).",
+    links: [{ label: "Instagram @bchef.lv", href: "https://www.instagram.com/bchef.lv/" }],
+    problem: "No local solution for affordable, chef-designed meal kits.",
+    approach: [
+      "Created a menu planning and automatic calculation system on the backend after compiling a national supplier database.",
+      "Collaborated with 5 local restaurants and chefs to design high-quality recipes.",
+      "Integrated seamless API connections with local delivery partners.",
+      "Acquired first 100 paying users in 100 days through direct marketing and partnerships.",
+    ],
+    results: [
+      "Reached a valuation of €1.5M within 6 months of launch (bootstrapped).",
+      "Operated for 1 year; pivoted and closed due to scaling difficulties.",
+      "Gained hands-on experience in B2C ops, logistics, and foodtech GTM.",
     ],
   },
   {

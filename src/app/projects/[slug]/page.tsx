@@ -88,7 +88,7 @@ export default function ProjectPage({
       </section>
 
       <section className="rounded-3xl border border-zinc-200 bg-white p-7 shadow-sm dark:border-zinc-800 dark:bg-zinc-950">
-        <h2 className="text-base font-medium">Summary</h2>
+        <h2 className="text-base font-medium">Overview</h2>
         <p className="mt-2 text-sm leading-6 text-zinc-600 dark:text-zinc-400">
           {project.description}
         </p>
@@ -109,6 +109,37 @@ export default function ProjectPage({
           </div>
         ) : null}
       </section>
+
+      {project.problem ? (
+        <section className="rounded-3xl border border-zinc-200 bg-white p-7 shadow-sm dark:border-zinc-800 dark:bg-zinc-950">
+          <h2 className="text-base font-medium">Problem</h2>
+          <p className="mt-2 text-sm leading-6 text-zinc-600 dark:text-zinc-400">
+            {project.problem}
+          </p>
+        </section>
+      ) : null}
+
+      {project.approach?.length ? (
+        <section className="rounded-3xl border border-zinc-200 bg-white p-7 shadow-sm dark:border-zinc-800 dark:bg-zinc-950">
+          <h2 className="text-base font-medium">Approach</h2>
+          <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-6 text-zinc-600 dark:text-zinc-400">
+            {project.approach.map((h) => (
+              <li key={h}>{h}</li>
+            ))}
+          </ul>
+        </section>
+      ) : null}
+
+      {project.results?.length ? (
+        <section className="rounded-3xl border border-zinc-200 bg-white p-7 shadow-sm dark:border-zinc-800 dark:bg-zinc-950">
+          <h2 className="text-base font-medium">Results</h2>
+          <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-6 text-zinc-600 dark:text-zinc-400">
+            {project.results.map((h) => (
+              <li key={h}>{h}</li>
+            ))}
+          </ul>
+        </section>
+      ) : null}
 
       {project.highlights?.length ? (
         <section className="rounded-3xl border border-zinc-200 bg-white p-7 shadow-sm dark:border-zinc-800 dark:bg-zinc-950">
