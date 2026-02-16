@@ -7,6 +7,8 @@ export type Project = {
   status?: "Active" | "Shipped" | "Paused";
   links?: { label: string; href: string }[];
 
+  kind?: "main" | "fun";
+
   role?: string;
   timeline?: string;
 
@@ -114,7 +116,8 @@ export const projects: Project[] = [
   {
     slug: "vnx-compliance",
     title: "VNX.li Compliance Integration",
-    oneLiner: "KYC/AML onboarding + compliance integrations for tokenized investments.",
+    oneLiner:
+      "KYC/AML onboarding + compliance integrations for tokenized investments.",
     description:
       "Worked on a tokenized investment platform for HNWIs. Introduced built-in KYC/AML compliance flows and improved onboarding UX. Contributed to the historical launch of VNXAU (tokenized gold).",
     tags: ["FinTech", "Compliance", "KYC/AML"],
@@ -187,7 +190,12 @@ export const projects: Project[] = [
     status: "Shipped",
     role: "Founder",
     timeline: "2020 – 2021",
-    links: [{ label: "Instagram @bchef.lv", href: "https://www.instagram.com/bchef.lv/" }],
+    links: [
+      {
+        label: "Instagram @bchef.lv",
+        href: "https://www.instagram.com/bchef.lv/",
+      },
+    ],
     problem: "No local solution for affordable, chef-designed meal kits.",
     approach: [
       "Created a menu planning and automatic calculation system on the backend after compiling a national supplier database.",
@@ -208,15 +216,6 @@ export const projects: Project[] = [
     ],
   },
   {
-    slug: "ando-portfolio",
-    title: "Ando Portfolio",
-    oneLiner: "Personal portfolio site.",
-    description: "This site — a lightweight place to publish product work.",
-    tags: ["Next.js", "Tailwind", "Vercel"],
-    status: "Shipped",
-    highlights: ["Fast, clean, and easy to iterate."],
-  },
-  {
     slug: "agentic-ecom-engine",
     title: "Agentic E-com Engine",
     oneLiner: "Exploring agentic commerce + structured product data.",
@@ -228,6 +227,28 @@ export const projects: Project[] = [
       "Problem discovery + prototyping.",
       "Positioning exploration (SMB vs procurement).",
     ],
+  },
+
+  // Fun projects
+  {
+    kind: "fun",
+    slug: "recipe-project",
+    title: "recipe_project",
+    oneLiner: "Tiny experiment around recipes and fast iteration.",
+    description:
+      "A small side project — quick build focused on learning and shipping.",
+    tags: ["Fun", "Experiment"],
+    status: "Active",
+  },
+  {
+    kind: "fun",
+    slug: "anyone-free",
+    title: "anyone-free",
+    oneLiner: "A small fun build (early-stage / experimental).",
+    description:
+      "A side experiment — lightweight and playful, built to explore an idea.",
+    tags: ["Fun", "Experiment"],
+    status: "Active",
   },
 ];
 

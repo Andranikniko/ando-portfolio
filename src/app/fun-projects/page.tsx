@@ -3,25 +3,26 @@ import type { Metadata } from "next";
 import { projects } from "@/lib/projects";
 
 export const metadata: Metadata = {
-  title: "Projects",
+  title: "Fun projects",
 };
 
-export default function ProjectsPage() {
-  const main = projects.filter((p) => p.kind !== "fun");
+export default function FunProjectsPage() {
+  const fun = projects.filter((p) => p.kind === "fun");
 
   return (
     <div className="space-y-8">
       <header className="space-y-2">
         <h1 className="text-2xl font-semibold tracking-tight sm:text-3xl">
-          Projects
+          Fun projects
         </h1>
         <p className="max-w-2xl text-sm leading-6 text-zinc-600 dark:text-zinc-400">
-          Selected work. Click a project to open the full page.
+          Small side experiments — quick builds, weird ideas, and learning
+          loops.
         </p>
       </header>
 
       <ul className="grid gap-4 sm:grid-cols-2">
-        {main.map((p) => (
+        {fun.map((p) => (
           <li key={p.slug} className="h-full">
             <Link
               href={`/projects/${p.slug}`}
@@ -61,6 +62,12 @@ export default function ProjectsPage() {
           </li>
         ))}
       </ul>
+
+      {fun.length === 0 ? (
+        <p className="text-sm text-zinc-600 dark:text-zinc-400">
+          No fun projects yet.
+        </p>
+      ) : null}
     </div>
   );
 }
