@@ -82,6 +82,12 @@ export const projects: Project[] = [
       "Achieved 10+ B2B test clients in EU and US markets.",
       "Enabled partner platforms to pre-qualify item listings using AI.",
     ],
+    screenshots: [
+      {
+        alt: "Resale-X — item details / pricing / counterfeit probability UI",
+        src: "/projects/resale-x/ui-1.jpg",
+      },
+    ],
   },
   {
     slug: "vnx-compliance",

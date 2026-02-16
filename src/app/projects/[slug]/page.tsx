@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { getProject, projects } from "@/lib/projects";
@@ -138,6 +139,34 @@ export default function ProjectPage({
               <li key={h}>{h}</li>
             ))}
           </ul>
+        </section>
+      ) : null}
+
+      {project.screenshots?.length ? (
+        <section className="rounded-3xl border border-zinc-200 bg-white p-7 shadow-sm dark:border-zinc-800 dark:bg-zinc-950">
+          <h2 className="text-base font-medium">Screenshots</h2>
+          <div className="mt-4 grid gap-4 sm:grid-cols-2">
+            {project.screenshots.map((s) => (
+              <a
+                key={s.src}
+                href={s.src}
+                target="_blank"
+                rel="noreferrer"
+                className="group overflow-hidden rounded-2xl border border-zinc-200 bg-zinc-50 dark:border-zinc-800 dark:bg-black/30"
+              >
+                <Image
+                  src={s.src}
+                  alt={s.alt}
+                  width={1600}
+                  height={900}
+                  className="h-auto w-full object-cover transition group-hover:scale-[1.01]"
+                />
+              </a>
+            ))}
+          </div>
+          <p className="mt-3 text-xs text-zinc-500 dark:text-zinc-400">
+            Tip: click to open full size.
+          </p>
         </section>
       ) : null}
 
