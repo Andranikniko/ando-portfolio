@@ -12,33 +12,48 @@ export default function AboutPage() {
           About
         </h1>
         <p className="max-w-2xl text-sm leading-6 text-zinc-600 dark:text-zinc-400">
-          Short bio + what I care about.
+          Product manager & startup builder. I love building.
         </p>
       </header>
 
       <section className="rounded-2xl border border-zinc-200 bg-white p-6 dark:border-zinc-800 dark:bg-zinc-950">
         <h2 className="text-base font-medium">Bio</h2>
         <p className="mt-2 text-sm leading-6 text-zinc-600 dark:text-zinc-400">
-          I’m Ando. I build and ship product — from messy problem discovery to
-          execution.
+          I’m Ando — a product manager and startup builder with 6+ years of
+          experience. I like turning messy problems into shipped products.
         </p>
       </section>
 
       <section className="grid gap-4 sm:grid-cols-2">
         <div className="rounded-2xl border border-zinc-200 bg-white p-6 dark:border-zinc-800 dark:bg-zinc-950">
-          <h2 className="text-base font-medium">Focus</h2>
+          <h2 className="text-base font-medium">What I like building</h2>
           <ul className="mt-2 list-disc space-y-1 pl-5 text-sm text-zinc-600 dark:text-zinc-400">
-            <li>Product strategy & execution</li>
+            <li>Products with clear value + crisp UX</li>
             <li>AI-enabled workflows</li>
-            <li>Systems, tooling, and iteration</li>
+            <li>Systems, tooling, and fast iteration loops</li>
           </ul>
         </div>
 
         <div className="rounded-2xl border border-zinc-200 bg-white p-6 dark:border-zinc-800 dark:bg-zinc-950">
           <h2 className="text-base font-medium">Contact</h2>
-          <p className="mt-2 text-sm leading-6 text-zinc-600 dark:text-zinc-400">
-            Add your links here (email / X / LinkedIn / GitHub).
-          </p>
+          <div className="mt-2 space-y-2 text-sm">
+            <a
+              className="block text-zinc-700 hover:text-zinc-900 dark:text-zinc-300 dark:hover:text-zinc-50"
+              href="https://github.com/Andranikniko"
+              target="_blank"
+              rel="noreferrer"
+            >
+              GitHub →
+            </a>
+            <a
+              className="block text-zinc-700 hover:text-zinc-900 dark:text-zinc-300 dark:hover:text-zinc-50"
+              href="#"
+              target="_blank"
+              rel="noreferrer"
+            >
+              LinkedIn →
+            </a>
+          </div>
         </div>
       </section>
     </div>

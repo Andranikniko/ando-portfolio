@@ -15,16 +15,16 @@ type Project = {
 const projects: Project[] = [
   {
     title: "Ando Portfolio",
-    description: "This site — a lightweight place to publish product work.",
-    tags: ["Next.js", "Tailwind"],
-    status: "Active",
+    description: "Personal product portfolio website.",
+    tags: ["Next.js", "Tailwind", "Vercel"],
+    status: "Shipped",
   },
   {
-    title: "Add your next project here",
+    title: "Agentic E-com Engine",
     description:
-      "Replace with a real entry: problem, your role, what shipped, and impact.",
-    tags: ["Template"],
-    status: "Paused",
+      "Exploring agentic commerce + structured product data (work in progress).",
+    tags: ["AI", "E-commerce", "R&D"],
+    status: "Active",
   },
 ];
 
