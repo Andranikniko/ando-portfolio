@@ -16,7 +16,7 @@ export default function AboutPage() {
         </p>
       </header>
 
-      <section className="rounded-2xl border border-zinc-200 bg-white p-6 dark:border-zinc-800 dark:bg-zinc-950">
+      <section className="rounded-3xl border border-zinc-200 bg-white p-7 shadow-sm dark:border-zinc-800 dark:bg-zinc-950">
         <h2 className="text-base font-medium">Bio</h2>
         <p className="mt-2 text-sm leading-6 text-zinc-600 dark:text-zinc-400">
           I’m Ando — a product manager and startup builder with 6+ years of
@@ -25,7 +25,7 @@ export default function AboutPage() {
       </section>
 
       <section className="grid gap-4 sm:grid-cols-2">
-        <div className="rounded-2xl border border-zinc-200 bg-white p-6 dark:border-zinc-800 dark:bg-zinc-950">
+        <div className="rounded-3xl border border-zinc-200 bg-white p-7 shadow-sm dark:border-zinc-800 dark:bg-zinc-950">
           <h2 className="text-base font-medium">What I like building</h2>
           <ul className="mt-2 list-disc space-y-1 pl-5 text-sm text-zinc-600 dark:text-zinc-400">
             <li>Products with clear value + crisp UX</li>
@@ -34,11 +34,11 @@ export default function AboutPage() {
           </ul>
         </div>
 
-        <div className="rounded-2xl border border-zinc-200 bg-white p-6 dark:border-zinc-800 dark:bg-zinc-950">
+        <div className="rounded-3xl border border-zinc-200 bg-white p-7 shadow-sm dark:border-zinc-800 dark:bg-zinc-950">
           <h2 className="text-base font-medium">Contact</h2>
-          <div className="mt-2 space-y-2 text-sm">
+          <div className="mt-3 space-y-2 text-sm">
             <a
-              className="block text-zinc-700 hover:text-zinc-900 dark:text-zinc-300 dark:hover:text-zinc-50"
+              className="block font-medium text-indigo-600 hover:text-indigo-700 dark:text-indigo-400 dark:hover:text-indigo-300"
               href="https://github.com/Andranikniko"
               target="_blank"
               rel="noreferrer"
@@ -46,7 +46,7 @@ export default function AboutPage() {
               GitHub →
             </a>
             <a
-              className="block text-zinc-700 hover:text-zinc-900 dark:text-zinc-300 dark:hover:text-zinc-50"
+              className="block font-medium text-indigo-600 hover:text-indigo-700 dark:text-indigo-400 dark:hover:text-indigo-300"
               href="#"
               target="_blank"
               rel="noreferrer"
