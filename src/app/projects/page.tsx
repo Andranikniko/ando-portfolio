@@ -8,14 +8,69 @@ type Project = {
   title: string;
   description: string;
   tags: string[];
-  href?: string;
+  links?: { label: string; href: string }[];
   status?: "Active" | "Shipped" | "Paused";
 };
 
 const projects: Project[] = [
   {
+    title: "LegitGrails B2B Platform",
+    description:
+      "Led the development and scaling of a dual B2B/B2C SaaS authentication platform (from $5K to $120K MRR).",
+    tags: ["B2B SaaS", "Auth", "APIs", "Shopify"],
+    status: "Shipped",
+    links: [
+      { label: "legitgrails.com", href: "https://legitgrails.com/" },
+      { label: "B2B", href: "https://b2b.legitgrails.com/" },
+      {
+        label: "API Docs",
+        href: "https://legit-grails.stoplight.io/docs/verification-api/9ad89a0cede23-summary",
+      },
+    ],
+  },
+  {
+    title: "Resale-X (AI Application)",
+    description:
+      "AI tool for item recognition and price estimation using ML + historical verification data.",
+    tags: ["AI", "ML", "Resale"],
+    status: "Active",
+    links: [{ label: "resale-x.com", href: "https://resale-x.com/" }],
+  },
+  {
+    title: "VNX.li Compliance Integration",
+    description:
+      "Built KYC/AML onboarding flows for a tokenized investment platform (HNWIs) and contributed to VNXAU (tokenized gold).",
+    tags: ["FinTech", "Compliance", "KYC/AML"],
+    status: "Shipped",
+    links: [{ label: "vnx.li", href: "https://vnx.li/" }],
+  },
+  {
+    title: "Yesim B2B Platform and Mobile App",
+    description:
+      "Led GTM and product development for a B2B telecom SaaS product; improved retention via loyalty & packages.",
+    tags: ["B2B", "Telecom", "GTM"],
+    status: "Shipped",
+    links: [
+      { label: "yesim.app", href: "https://yesim.app/" },
+      { label: "B2B", href: "https://yesim.app/b2b-enterprise/" },
+    ],
+  },
+  {
+    title: "BChef.lv (Side Project)",
+    description:
+      "Founder — built Latvia’s first meal-kit delivery platform during COVID; reached €1.5M valuation (bootstrapped).",
+    tags: ["Founder", "B2C", "Ops"],
+    status: "Shipped",
+    links: [
+      {
+        label: "Instagram",
+        href: "https://www.instagram.com/bchef.lv/",
+      },
+    ],
+  },
+  {
     title: "Ando Portfolio",
-    description: "Personal product portfolio website.",
+    description: "This site — a lightweight place to publish product work.",
     tags: ["Next.js", "Tailwind", "Vercel"],
     status: "Shipped",
   },
@@ -71,6 +126,22 @@ export default function ProjectsPage() {
                 </span>
               ))}
             </div>
+
+            {p.links?.length ? (
+              <div className="mt-4 flex flex-wrap gap-3 text-sm">
+                {p.links.map((l) => (
+                  <a
+                    key={l.href}
+                    href={l.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-zinc-700 hover:text-zinc-900 dark:text-zinc-300 dark:hover:text-zinc-50"
+                  >
+                    {l.label} →
+                  </a>
+                ))}
+              </div>
+            ) : null}
           </li>
         ))}
       </ul>
