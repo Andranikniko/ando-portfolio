@@ -234,9 +234,8 @@ export const projects: Project[] = [
     kind: "fun",
     slug: "recipe_project",
     title: "recipe_project",
-    oneLiner: "Tiny experiment around recipes and fast iteration.",
-    description:
-      "A small side project — quick build focused on learning and shipping.",
+    oneLiner: "Recipe side project (WIP).",
+    description: "Recipe side project (WIP).",
     tags: ["Fun", "Experiment"],
     status: "Active",
     links: [
@@ -250,15 +249,18 @@ export const projects: Project[] = [
     kind: "fun",
     slug: "anyone-free",
     title: "anyone-free",
-    oneLiner: "A small fun build (early-stage / experimental).",
-    description:
-      "A side experiment — lightweight and playful, built to explore an idea.",
+    oneLiner: "App for social meetings.",
+    description: "app for social meetings",
     tags: ["Fun", "Experiment"],
     status: "Active",
     links: [
       {
         label: "GitHub",
         href: "https://github.com/Andranikniko/anyone-free",
+      },
+      {
+        label: "Live",
+        href: "https://anyone-free.onrender.com",
       },
     ],
   },
