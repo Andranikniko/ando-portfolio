@@ -1,9 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 import { getProject, projects } from "@/lib/projects";
-
-export const dynamicParams = false;
 
 export function generateStaticParams() {
   return projects.map((p) => ({ slug: p.slug }));
@@ -29,42 +28,10 @@ export default function ProjectPage({
 }) {
   const project = getProject(params.slug);
 
-  // Debug-friendly fallback: if something is wrong with slugs in prod,
-  // this shows the requested slug + the available slugs.
   if (!project) {
-    return (
-      <div className="space-y-6">
-        <Link
-          href="/projects"
-          className="text-sm text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-50"
-        >
-          ← Back to projects
-        </Link>
-        <div className="rounded-3xl border border-zinc-200 bg-white p-7 shadow-sm dark:border-zinc-800 dark:bg-zinc-950">
-          <h1 className="text-xl font-semibold tracking-tight">
-            Project not found
-          </h1>
-          <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
-            Slug: <span className="font-mono">{params.slug}</span>
-          </p>
-          <p className="mt-4 text-sm text-zinc-600 dark:text-zinc-400">
-            Available slugs:
-          </p>
-          <ul className="mt-2 list-disc pl-5 text-sm text-zinc-600 dark:text-zinc-400">
-            {projects.map((p) => (
-              <li key={p.slug}>
-                <Link
-                  href={`/projects/${p.slug}`}
-                  className="text-indigo-600 hover:text-indigo-700 dark:text-indigo-400 dark:hover:text-indigo-300"
-                >
-                  {p.slug}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div>
-    );
+    // Avoid Next.js "NoFallbackError" in production when someone hits an unknown slug
+    // (old link, typo, different casing, trailing slash, etc.).
+    notFound();
   }
 
   return (
