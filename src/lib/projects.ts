@@ -9,6 +9,9 @@ export type Project = {
 
   kind?: "main" | "fun";
 
+  /** Used for ordering/grouping on the Projects page */
+  year?: number;
+
   role?: string;
   timeline?: string;
 
@@ -30,6 +33,7 @@ export const projects: Project[] = [
       "Led the development and scaling of a dual B2B and B2C SaaS authentication service platform.",
     tags: ["B2B SaaS", "Auth", "APIs", "Shopify"],
     status: "Shipped",
+    year: 2022,
     role: "Head of Product",
     timeline: "2022 – 2025",
     links: [
@@ -84,6 +88,7 @@ export const projects: Project[] = [
       "Owned and evolved the iOS experience across discovery, onboarding, order submission and post-purchase flows — as part of the wider LegitGrails product ecosystem.",
     tags: ["iOS", "Mobile", "B2C", "Payments", "Retention"],
     status: "Shipped",
+    year: 2025,
     role: "Product Lead",
     timeline: "2020 – 2025",
     links: [{ label: "legitgrails.com", href: "https://legitgrails.com/" }],
@@ -108,6 +113,7 @@ export const projects: Project[] = [
       "Created Resale-X as a spin-off AI tool for item recognition and price estimation using ML and LegitGrails historical data.",
     tags: ["AI", "ML", "Resale"],
     status: "Active",
+    year: 2024,
     role: "Product Lead",
     timeline: "2024 – Present",
     links: [{ label: "resale-x.com", href: "https://resale-x.com/" }],
@@ -149,6 +155,7 @@ export const projects: Project[] = [
       "Worked on a tokenized investment platform for HNWIs. Introduced built-in KYC/AML compliance flows and improved onboarding UX. Contributed to the historical launch of VNXAU (tokenized gold).",
     tags: ["FinTech", "Compliance", "KYC/AML"],
     status: "Shipped",
+    year: 2021,
     role: "Product Manager & COO",
     timeline: "Jan 2022 – Oct 2022",
     links: [{ label: "vnx.li", href: "https://vnx.li/" }],
@@ -177,6 +184,7 @@ export const projects: Project[] = [
       "Led GTM and product development for a B2B telecom SaaS product and supported Yesim’s consumer app.",
     tags: ["B2B", "Telecom", "GTM"],
     status: "Shipped",
+    year: 2019,
     role: "Product Manager",
     timeline: "Apr 2020 – Mar 2021",
     links: [
@@ -215,6 +223,7 @@ export const projects: Project[] = [
       "Built and launched Latvia’s first meal-kit delivery platform during COVID-19.",
     tags: ["Founder", "B2C", "Ops"],
     status: "Shipped",
+    year: 2020,
     role: "Founder",
     timeline: "2020 – 2021",
     links: [
@@ -250,6 +259,7 @@ export const projects: Project[] = [
       "Exploring agentic commerce + structured product data (work in progress).",
     tags: ["AI", "E-commerce", "R&D"],
     status: "Active",
+    year: 2026,
     highlights: [
       "Problem discovery + prototyping.",
       "Positioning exploration (SMB vs procurement).",
@@ -261,9 +271,10 @@ export const projects: Project[] = [
     kind: "fun",
     slug: "recipe_project",
     title: "recipe_project",
-    oneLiner: "Recipe side project (WIP).",
-    description: "Recipe side project (WIP).",
-    tags: ["Fun", "Experiment"],
+    oneLiner: "Recipe experiments: parsing, planning, and quick UX iterations.",
+    description:
+      "A small playground for recipe UX: structuring recipe data, experimenting with meal planning, and iterating quickly on UI patterns.",
+    tags: ["Fun", "Experiment", "Food"],
     status: "Active",
     links: [
       {
@@ -276,9 +287,10 @@ export const projects: Project[] = [
     kind: "fun",
     slug: "anyone-free",
     title: "anyone-free",
-    oneLiner: "App for social meetings.",
-    description: "app for social meetings",
-    tags: ["Fun", "Experiment"],
+    oneLiner: "A lightweight app for spontaneous social meetups.",
+    description:
+      "An experiment around spontaneity: find who’s free, propose a plan, and reduce the friction of starting an in-person hangout.",
+    tags: ["Fun", "Experiment", "Social"],
     status: "Active",
     links: [
       {
