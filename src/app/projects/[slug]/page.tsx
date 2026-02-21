@@ -8,12 +8,14 @@ export function generateStaticParams() {
   return projects.map((p) => ({ slug: p.slug }));
 }
 
-export function generateMetadata({
+export async function generateMetadata({
   params,
 }: {
-  params: { slug: string };
-}): Metadata {
-  const project = getProject(params.slug);
+  // Next.js 15+ (React 19) may pass route params as a Promise in Server Components
+  params: Promise<{ slug: string }> | { slug: string };
+}): Promise<Metadata> {
+  const resolvedParams = await params;
+  const project = getProject(resolvedParams.slug);
   if (!project) return { title: "Project" };
   return {
     title: project.title,
@@ -21,12 +23,14 @@ export function generateMetadata({
   };
 }
 
-export default function ProjectPage({
+export default async function ProjectPage({
   params,
 }: {
-  params: { slug: string };
+  // Next.js 15+ (React 19) may pass route params as a Promise in Server Components
+  params: Promise<{ slug: string }> | { slug: string };
 }) {
-  const project = getProject(params.slug);
+  const resolvedParams = await params;
+  const project = getProject(resolvedParams.slug);
 
   if (!project) {
     // Avoid Next.js "NoFallbackError" in production when someone hits an unknown slug
