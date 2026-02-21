@@ -31,7 +31,7 @@ export const projects: Project[] = [
     tags: ["B2B SaaS", "Auth", "APIs", "Shopify"],
     status: "Shipped",
     role: "Head of Product",
-    timeline: "Oct 2022 – Present",
+    timeline: "2022 – 2025",
     links: [
       { label: "legitgrails.com", href: "https://legitgrails.com/" },
       { label: "Account", href: "https://account.legitgrails.com/" },
@@ -40,6 +40,9 @@ export const projects: Project[] = [
         label: "API Docs",
         href: "https://legit-grails.stoplight.io/docs/verification-api/9ad89a0cede23-summary",
       },
+    ],
+    highlights: [
+      "Part of a multi-year journey — see LegitGrails Mobile iOS App (2020–2025) for the consumer side.",
     ],
     problem:
       "Fragmented user experience for fashion resale businesses and individual users seeking item authentication, poor retention and limited automation.",
@@ -71,6 +74,30 @@ export const projects: Project[] = [
         alt: "LegitGrails — key metrics (days to orders, avg orders per user)",
         src: "/projects/legitgrails-b2b-platform/metrics-orders.png",
       },
+    ],
+  },
+  {
+    slug: "legitgrails-mobile-ios-app",
+    title: "LegitGrails Mobile iOS App",
+    oneLiner: "Mobile iOS product for consumer authentication and customer lifecycle.",
+    description:
+      "Owned and evolved the iOS experience across discovery, onboarding, order submission and post-purchase flows — as part of the wider LegitGrails product ecosystem.",
+    tags: ["iOS", "Mobile", "B2C", "Payments", "Retention"],
+    status: "Shipped",
+    role: "Product Lead",
+    timeline: "2020 – 2025",
+    links: [{ label: "legitgrails.com", href: "https://legitgrails.com/" }],
+    problem:
+      "Consumer authentication needed a fast, trustworthy mobile-first journey with high completion rates and clear post-purchase communication.",
+    approach: [
+      "Shaped end-to-end user journeys (onboarding → order submission → status tracking).",
+      "Iterated UX to improve conversion and reduce support load.",
+      "Aligned mobile roadmap with web/account experiences and back-office operations.",
+      "Introduced clearer lifecycle comms (order state, next steps, expectations).",
+    ],
+    results: [
+      "Improved usability and flow clarity for consumer users.",
+      "Supported growth by reducing friction in the submission funnel.",
     ],
   },
   {
