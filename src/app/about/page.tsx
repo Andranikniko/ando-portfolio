@@ -15,7 +15,7 @@ const experience = [
   {
     role: "Product Lead",
     company: "Resale-X (AI spin-off)",
-    period: "2024 - Present",
+    period: "2024 - 2025",
     description:
       "Built AI-powered item recognition and pricing tool. Signed first B2B clients across EU, US, and Japan.",
   },
