@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { projects } from "@/lib/projects";
+import { StatusBadge } from "@/components/status-badge";
 
 const metrics = [
   { value: "$120K", label: "MRR Scaled", sublabel: "from $5K in 2 years" },
@@ -8,25 +9,6 @@ const metrics = [
   { value: "3", label: "Markets Entered", sublabel: "EU, US, Japan" },
 ];
 
-function StatusBadge({ status }: { status?: string }) {
-  if (!status) return null;
-  const cls =
-    status === "Active"
-      ? "status-active"
-      : status === "Shipped"
-        ? "status-shipped"
-        : "status-paused";
-  return (
-    <span
-      className={`inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-medium ${cls}`}
-    >
-      {status === "Active" && (
-        <span className="mr-1.5 h-1.5 w-1.5 rounded-full bg-emerald-500" />
-      )}
-      {status}
-    </span>
-  );
-}
 
 export default function Home() {
   const featured = projects

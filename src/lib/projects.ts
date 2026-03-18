@@ -155,7 +155,7 @@ export const projects: Project[] = [
       "Worked on a tokenized investment platform for HNWIs. Introduced built-in KYC/AML compliance flows and improved onboarding UX. Contributed to the historical launch of VNXAU (tokenized gold).",
     tags: ["FinTech", "Compliance", "KYC/AML"],
     status: "Shipped",
-    year: 2021,
+    year: 2022,
     role: "Product Manager & COO",
     timeline: "Jan 2022 – Oct 2022",
     links: [{ label: "vnx.li", href: "https://vnx.li/" }],
@@ -260,6 +260,8 @@ export const projects: Project[] = [
     tags: ["AI", "E-commerce", "R&D"],
     status: "Active",
     year: 2026,
+    role: "Product Lead",
+    timeline: "2026 – Present",
     highlights: [
       "Problem discovery + prototyping.",
       "Positioning exploration (SMB vs procurement).",

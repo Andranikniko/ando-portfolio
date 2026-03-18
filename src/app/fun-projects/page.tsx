@@ -11,9 +11,9 @@ export default function FunProjectsPage() {
 
   return (
     <div className="space-y-10">
-      <header className="animate-fade-in space-y-3">
+      <header className="space-y-3">
         <div className="inline-flex items-center gap-2 rounded-full border border-amber-200/60 bg-amber-50/80 px-3.5 py-1.5 text-xs font-medium text-amber-700 dark:border-amber-500/20 dark:bg-amber-500/10 dark:text-amber-300">
-          Side experiments
+          Fun experiments
         </div>
         <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">
           Fun Projects
@@ -31,7 +31,7 @@ export default function FunProjectsPage() {
           </p>
         </div>
       ) : (
-        <ul className="animate-fade-in-up delay-100 grid gap-4 sm:grid-cols-2">
+        <ul className="grid gap-4 sm:grid-cols-2">
           {fun.map((p) => (
             <li key={p.slug} className="h-full">
               <Link
@@ -40,9 +40,9 @@ export default function FunProjectsPage() {
               >
                 <div className="flex items-start justify-between gap-3">
                   <div className="flex-1">
-                    <h2 className="text-base font-semibold tracking-tight">
+                    <h3 className="text-base font-semibold tracking-tight">
                       {p.title}
-                    </h2>
+                    </h3>
                     <p className="mt-2 text-sm leading-6 text-zinc-600 dark:text-zinc-400">
                       {p.oneLiner}
                     </p>

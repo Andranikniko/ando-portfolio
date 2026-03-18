@@ -1,30 +1,12 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { projects } from "@/lib/projects";
+import { StatusBadge } from "@/components/status-badge";
 
 export const metadata: Metadata = {
   title: "Projects",
 };
 
-function StatusBadge({ status }: { status?: string }) {
-  if (!status) return null;
-  const cls =
-    status === "Active"
-      ? "status-active"
-      : status === "Shipped"
-        ? "status-shipped"
-        : "status-paused";
-  return (
-    <span
-      className={`inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-medium ${cls}`}
-    >
-      {status === "Active" && (
-        <span className="mr-1.5 h-1.5 w-1.5 rounded-full bg-emerald-500" />
-      )}
-      {status}
-    </span>
-  );
-}
 
 export default function ProjectsPage() {
   const main = projects.filter((p) => p.kind !== "fun");
@@ -42,7 +24,7 @@ export default function ProjectsPage() {
 
   return (
     <div className="space-y-12">
-      <header className="animate-fade-in space-y-3">
+      <header className="space-y-3">
         <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">
           Projects
         </h1>
@@ -54,7 +36,7 @@ export default function ProjectsPage() {
 
       <div className="space-y-14">
         {years.map((year) => (
-          <section key={year} className="animate-fade-in-up space-y-5">
+          <section key={year} className="space-y-5">
             <div className="flex items-center gap-4">
               <h2 className="flex items-center gap-2 text-lg font-bold tracking-tight text-zinc-900 dark:text-zinc-50">
                 <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-zinc-100 text-sm font-bold dark:bg-zinc-800">

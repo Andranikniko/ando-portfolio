@@ -3,6 +3,7 @@ import Image from "next/image";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getProject, projects } from "@/lib/projects";
+import { StatusBadge } from "@/components/status-badge";
 
 export function generateStaticParams() {
   return projects.map((p) => ({ slug: p.slug }));
@@ -22,25 +23,6 @@ export async function generateMetadata({
   };
 }
 
-function StatusBadge({ status }: { status?: string }) {
-  if (!status) return null;
-  const cls =
-    status === "Active"
-      ? "status-active"
-      : status === "Shipped"
-        ? "status-shipped"
-        : "status-paused";
-  return (
-    <span
-      className={`inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-medium ${cls}`}
-    >
-      {status === "Active" && (
-        <span className="mr-1.5 h-1.5 w-1.5 rounded-full bg-emerald-500" />
-      )}
-      {status}
-    </span>
-  );
-}
 
 function SectionCard({
   title,
@@ -78,7 +60,7 @@ export default async function ProjectPage({
 
   return (
     <div className="space-y-8">
-      <div className="animate-fade-in space-y-5">
+      <div className="space-y-5">
         <Link
           href="/projects"
           className="inline-flex items-center gap-1.5 text-sm font-medium text-zinc-500 transition-colors hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-50"
@@ -102,7 +84,7 @@ export default async function ProjectPage({
         </div>
       </div>
 
-      <section className="animate-fade-in-up delay-100 grid gap-3 sm:grid-cols-3">
+      <section className="grid gap-3 sm:grid-cols-3">
         {project.role && (
           <div className="metric-card rounded-2xl border border-zinc-200/80 bg-white p-5 shadow-sm dark:border-zinc-800/80 dark:bg-zinc-900/50">
             <div className="text-xs font-medium uppercase tracking-wider text-zinc-400 dark:text-zinc-500">
@@ -140,7 +122,7 @@ export default async function ProjectPage({
         </div>
       </section>
 
-      <div className="animate-fade-in-up delay-200">
+      <div>
         <SectionCard
           title="Overview"
           icon={
@@ -175,7 +157,7 @@ export default async function ProjectPage({
       </div>
 
       {project.problem && (
-        <div className="animate-fade-in-up delay-300">
+        <div>
           <SectionCard
             title="Problem"
             icon={
@@ -192,7 +174,7 @@ export default async function ProjectPage({
       )}
 
       {project.approach?.length ? (
-        <div className="animate-fade-in-up delay-300">
+        <div>
           <SectionCard
             title="Approach"
             icon={
@@ -216,7 +198,7 @@ export default async function ProjectPage({
       ) : null}
 
       {project.results?.length ? (
-        <div className="animate-fade-in-up delay-300">
+        <div>
           <SectionCard
             title="Results"
             icon={
@@ -242,7 +224,7 @@ export default async function ProjectPage({
       ) : null}
 
       {project.screenshots?.length ? (
-        <div className="animate-fade-in-up delay-300">
+        <div>
           <SectionCard
             title="Screenshots"
             icon={
@@ -278,7 +260,7 @@ export default async function ProjectPage({
       ) : null}
 
       {project.highlights?.length ? (
-        <div className="animate-fade-in-up delay-300">
+        <div>
           <SectionCard
             title="Highlights"
             icon={
