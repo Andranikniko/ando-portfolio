@@ -112,10 +112,10 @@ export const projects: Project[] = [
     description:
       "Created Resale-X as a spin-off AI tool for item recognition and price estimation using ML and LegitGrails historical data.",
     tags: ["AI", "ML", "Resale"],
-    status: "Active",
+    status: "Shipped",
     year: 2024,
     role: "Product Lead",
-    timeline: "2024 – Present",
+    timeline: "2024 – 2025",
     links: [{ label: "resale-x.com", href: "https://resale-x.com/" }],
     problem:
       "Lack of scalable tools for automatic recognition and pricing of fashion resale items.",
@@ -217,7 +217,7 @@ export const projects: Project[] = [
   },
   {
     slug: "bchef",
-    title: "BChef.lv (Side Project)",
+    title: "BChef.lv",
     oneLiner: "Bootstrapped meal-kit delivery in Latvia during COVID.",
     description:
       "Built and launched Latvia’s first meal-kit delivery platform during COVID-19.",
