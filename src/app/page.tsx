@@ -35,33 +35,33 @@ export default function Home() {
 
   return (
     <div className="space-y-20">
-      <section className="animate-fade-in relative">
+      <section className="relative">
         <div className="relative overflow-hidden rounded-3xl border border-zinc-200/80 bg-white shadow-sm dark:border-zinc-800/80 dark:bg-zinc-900/50">
           <div className="pointer-events-none absolute inset-0 animate-gradient [background:linear-gradient(135deg,rgba(79,70,229,0.08)_0%,rgba(16,185,129,0.06)_25%,rgba(139,92,246,0.06)_50%,rgba(6,182,212,0.05)_75%,rgba(79,70,229,0.08)_100%)]" />
           <div className="pointer-events-none absolute -right-32 -top-32 h-96 w-96 rounded-full bg-indigo-500/5 blur-3xl" />
           <div className="pointer-events-none absolute -bottom-32 -left-32 h-96 w-96 rounded-full bg-emerald-500/5 blur-3xl" />
 
           <div className="relative px-8 py-14 sm:px-12 sm:py-20">
-            <div className="animate-fade-in-up delay-100 mb-4 inline-flex items-center gap-2 rounded-full border border-indigo-200/60 bg-indigo-50/80 px-3.5 py-1.5 text-xs font-medium text-indigo-700 dark:border-indigo-500/20 dark:bg-indigo-500/10 dark:text-indigo-300">
+            <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-indigo-200/60 bg-indigo-50/80 px-3.5 py-1.5 text-xs font-medium text-indigo-700 dark:border-indigo-500/20 dark:bg-indigo-500/10 dark:text-indigo-300">
               <span className="h-1.5 w-1.5 rounded-full bg-indigo-500" />
               Open to opportunities
             </div>
 
-            <h1 className="animate-fade-in-up delay-200 max-w-3xl text-3xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
+            <h1 className="max-w-3xl text-3xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
               I scale products{" "}
               <span className="text-indigo-600 dark:text-indigo-400">
                 from zero to revenue.
               </span>
             </h1>
 
-            <p className="animate-fade-in-up delay-300 mt-5 max-w-2xl text-base leading-7 text-zinc-600 sm:text-lg sm:leading-8 dark:text-zinc-400">
+            <p className="mt-5 max-w-2xl text-base leading-7 text-zinc-600 sm:text-lg sm:leading-8 dark:text-zinc-400">
               Senior Product Manager with 6+ years building B2B SaaS, AI tools,
               and marketplace products. Shipped platforms that scaled to $120K
               MRR, launched in 3 markets, and served enterprise clients like
               FarFetch and British Red Cross.
             </p>
 
-            <div className="animate-fade-in-up delay-400 mt-8 flex flex-col gap-3 sm:flex-row">
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Link
                 href="/projects"
                 className="inline-flex items-center justify-center gap-2 rounded-full bg-zinc-900 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-zinc-900/10 transition-all hover:bg-zinc-800 hover:shadow-xl hover:shadow-zinc-900/20 dark:bg-zinc-50 dark:text-zinc-900 dark:shadow-zinc-50/5 dark:hover:bg-white"
@@ -92,13 +92,12 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="animate-fade-in-up delay-300">
+      <section>
         <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
-          {metrics.map((m, i) => (
+          {metrics.map((m) => (
             <div
               key={m.label}
-              className="metric-card rounded-2xl border border-zinc-200/80 bg-white p-5 shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md dark:border-zinc-800/80 dark:bg-zinc-900/50 animate-fade-in-up"
-              style={{ animationDelay: `${(i + 1) * 100}ms` }}
+              className="metric-card rounded-2xl border border-zinc-200/80 bg-white p-5 shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md dark:border-zinc-800/80 dark:bg-zinc-900/50"
             >
               <div className="text-2xl font-bold tracking-tight text-zinc-900 sm:text-3xl dark:text-zinc-50">
                 {m.value}
@@ -114,7 +113,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="animate-fade-in-up delay-400">
+      <section>
         <div className="mb-8 flex items-end justify-between">
           <div>
             <h2 className="text-xl font-semibold tracking-tight sm:text-2xl">
@@ -199,7 +198,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="animate-fade-in-up delay-500">
+      <section>
         <div className="grid gap-4 sm:grid-cols-2">
           <Link
             href="/fun-projects"

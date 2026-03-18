@@ -45,7 +45,7 @@ const skills = [
 export default function AboutPage() {
   return (
     <div className="space-y-12">
-      <header className="animate-fade-in space-y-4">
+      <header className="space-y-4">
         <div className="inline-flex items-center gap-2 rounded-full border border-indigo-200/60 bg-indigo-50/80 px-3.5 py-1.5 text-xs font-medium text-indigo-700 dark:border-indigo-500/20 dark:bg-indigo-500/10 dark:text-indigo-300">
           Senior Product Manager
         </div>
@@ -59,7 +59,7 @@ export default function AboutPage() {
         </p>
       </header>
 
-      <section className="animate-fade-in-up delay-100">
+      <section>
         <div className="rounded-2xl border border-zinc-200/80 bg-white p-7 shadow-sm dark:border-zinc-800/80 dark:bg-zinc-900/50">
           <div className="mb-5 flex items-center gap-3">
             <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-indigo-50 text-indigo-600 dark:bg-indigo-500/10 dark:text-indigo-400">
@@ -100,7 +100,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="animate-fade-in-up delay-200">
+      <section>
         <div className="mb-6 flex items-center gap-3">
           <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-zinc-100 text-zinc-600 dark:bg-zinc-800 dark:text-zinc-400">
             <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -136,7 +136,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="animate-fade-in-up delay-300">
+      <section>
         <div className="mb-6 flex items-center gap-3">
           <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-zinc-100 text-zinc-600 dark:bg-zinc-800 dark:text-zinc-400">
             <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -169,7 +169,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="animate-fade-in-up delay-400">
+      <section>
         <div className="rounded-2xl border border-zinc-200/80 bg-white p-7 shadow-sm dark:border-zinc-800/80 dark:bg-zinc-900/50">
           <div className="mb-5 flex items-center gap-3">
             <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-emerald-50 text-emerald-600 dark:bg-emerald-500/10 dark:text-emerald-400">
