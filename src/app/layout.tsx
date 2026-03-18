@@ -72,7 +72,7 @@ export default function RootLayout({
                   href="https://github.com/Andranikniko"
                   target="_blank"
                   rel="noreferrer"
-                  className="text-zinc-400 transition-colors hover:text-zinc-700 dark:hover:text-zinc-200"
+                  className="flex h-11 w-11 items-center justify-center text-zinc-400 transition-colors hover:text-zinc-700 dark:hover:text-zinc-200"
                   aria-label="GitHub"
                 >
                   <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
@@ -83,7 +83,7 @@ export default function RootLayout({
                   href="#"
                   target="_blank"
                   rel="noreferrer"
-                  className="text-zinc-400 transition-colors hover:text-zinc-700 dark:hover:text-zinc-200"
+                  className="flex h-11 w-11 items-center justify-center text-zinc-400 transition-colors hover:text-zinc-700 dark:hover:text-zinc-200"
                   aria-label="LinkedIn"
                 >
                   <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">

@@ -16,7 +16,7 @@ export function NavLink({
   return (
     <Link
       href={href}
-      className={`relative px-2 py-1 text-sm font-medium transition-colors ${
+      className={`relative px-3 py-3 text-sm font-medium transition-colors ${
         isActive
           ? "text-zinc-900 dark:text-zinc-50"
           : "text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-50"
