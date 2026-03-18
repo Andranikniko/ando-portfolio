@@ -49,7 +49,7 @@ export default function Home() {
 
             <h1 className="animate-fade-in-up delay-200 max-w-3xl text-3xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
               I scale products{" "}
-              <span className="bg-gradient-to-r from-indigo-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent dark:from-indigo-400 dark:via-purple-400 dark:to-indigo-400">
+              <span className="text-indigo-600 dark:text-indigo-400">
                 from zero to revenue.
               </span>
             </h1>
