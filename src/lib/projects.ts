@@ -271,13 +271,27 @@ export const projects: Project[] = [
   // Fun projects
   {
     kind: "fun",
+    slug: "market-sign",
+    title: "MarketSign",
+    oneLiner: "AI agents tracking competitor moves and regulations for executive strategy.",
+    description:
+      "An AI-native, multi-agent tool that monitors market signals — competitor activity, regulatory changes — and surfaces actionable insights to help business executives with planning and strategy.",
+    tags: ["AI", "Multi-agent", "Strategy", "B2B"],
+    status: "Active",
+    year: 2026,
+    role: "Founder",
+    timeline: "2026 – Present",
+    links: [{ label: "market-sign.com", href: "https://market-sign.com/" }],
+  },
+  {
+    kind: "fun",
     slug: "recipe_project",
     title: "recipe_project",
     oneLiner: "Recipe experiments: parsing, planning, and quick UX iterations.",
     description:
       "A small playground for recipe UX: structuring recipe data, experimenting with meal planning, and iterating quickly on UI patterns.",
     tags: ["Fun", "Experiment", "Food"],
-    status: "Active",
+    status: "Paused",
     links: [
       {
         label: "GitHub",
@@ -293,7 +307,7 @@ export const projects: Project[] = [
     description:
       "An experiment around spontaneity: find who’s free, propose a plan, and reduce the friction of starting an in-person hangout.",
     tags: ["Fun", "Experiment", "Social"],
-    status: "Active",
+    status: "Paused",
     links: [
       {
         label: "GitHub",
